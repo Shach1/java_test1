@@ -1,56 +1,51 @@
 import java.util.Scanner; // импортируем класс
 
-                //1
+                //1.4
 /*
 public class Main
 {
     public static void main(String[] args)
     {
-        int[] arr = new int[10];
-        for(int i = 0; i < arr.length; i++)     //Создание и заполнение массива
+        int[] arr = new int[15];
+        for(int i = 0; i < arr.length; i++)     //заполняем массив
         {
-            arr[i] = i + 1;
+            arr[i] = (int) (Math.random() * 100);
         }
 
-        int sum = 0;
-        for(int i = 0; i < arr.length; i++)     //циклом for
+        System.out.println("Массив до сортировки:");
+        for(int i = 0; i < arr.length;i++)      //вывод первоначального массива
         {
-            sum += arr[i];
+            System.out.print(arr[i] + " ");
         }
-        System.out.println("Через цикл for сумма = " + sum);
-        sum = 0;
 
-        int j = 0;
-        while(j < arr.length)
+        int tmp;
+        for(int i = 0; i < arr.length - 1; i++)     //стандартная сортировка пузырьком
         {
-            sum += arr[j];
-            j++;
+            for(int j = 0; j < arr.length - 1 - i; j++)
+            {
+                if(arr[j] > arr[j+1])
+                {
+                    tmp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
+            }
         }
-        System.out.println("Через цикл while сумма = " + sum);
-        sum = 0;
+        System.out.println("\nМассив после сортировки:");
+        for(int i = 0; i < arr.length;i++)      //вывод отсортированного массива
+        {
+            System.out.print(arr[i] + " ");
+        }
 
-        int k = 0;
-        do {
-            sum += arr[k];
-            k++;
-
-        }while (k < arr.length);
-        System.out.println("Через цикл do while сумма = " + sum);
     }
 }
 */
+            //
 
-                //3
 public class Main
 {
     public static void main(String[] args)
     {
-        double sum_row = 0;
-        for(int i = 1; i <= 10; i++)
-        {
-            sum_row += 1.0 / i;
-        }
-        System.out.println(sum_row);
+
     }
 }
-
