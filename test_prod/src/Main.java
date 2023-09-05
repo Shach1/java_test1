@@ -40,12 +40,16 @@ public class Main
     }
 }
 */
-            //
+
+            //4.2
 
 public class Main
 {
     public static void main(String[] args)
     {
-
+        Priceable priceable = new Car("Tesla model X", 23000);
+        System.out.println(priceable.getPrice());
+        priceable = new Dog("Labrador", 500);
+        System.out.println(priceable.getPrice());
     }
 }

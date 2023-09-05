@@ -5,6 +5,7 @@ public abstract class Furniture
     private int weight;   //вес
     private int length;   //длина
 
+
     Furniture(int width, int height, int weight, int length)
     {
         this.width = width;
