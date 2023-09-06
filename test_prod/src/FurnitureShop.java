@@ -1,3 +1,4 @@
+                //2.3
 public class FurnitureShop
 {
     public static void main(String[] args)
