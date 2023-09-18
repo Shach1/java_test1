@@ -15,16 +15,48 @@ public class lab_4 extends JFrame
     public lab_4()
     {
         super("Game - AC Milan vs Real Madrid");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //setSize(300,300);
-        setLayout(new BorderLayout());
-        setBounds(1000, 500, 300,300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+        setBounds(1000, 500, 350,250);
+        setLayout(new GridBagLayout());
 
-        add(butMilan, BorderLayout.WEST);
-        add(butMadrid, BorderLayout.EAST);
-        add(winner, BorderLayout.NORTH);
-        add(result, BorderLayout.CENTER);
-        add(lastScorer, BorderLayout.SOUTH);
+
+        GridBagConstraints constraints = new GridBagConstraints();
+
+        constraints.gridx = 2;                                               // ячейка по х
+        constraints.gridy = 0;                                               // ячейка по  y
+        constraints.gridwidth = 1;                                           // сколько ячеек занимает по х
+        constraints.gridheight = 1;                                          // сколько ячеек занимает по y
+        constraints.anchor = GridBagConstraints.NORTH;                       // ориентация к северу
+        constraints.insets = new Insets(2,2,2,2);       // отступы
+        constraints.weightx = 0;
+        constraints.weighty = 0.1;
+        add(winner, constraints);
+
+        constraints.gridx = 2;
+        constraints.gridy = 2;
+        constraints.anchor = GridBagConstraints.CENTER;
+        add(result, constraints);
+
+        constraints.gridx = 2;
+        constraints.gridy = 4;
+        constraints.anchor = GridBagConstraints.SOUTH;
+
+        add(lastScorer, constraints);
+
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        constraints.anchor = GridBagConstraints.WEST;
+        constraints.weightx = 0.3;
+        constraints.weighty = 0.1;
+        add(butMilan, constraints);
+
+        constraints.gridx = 4;
+        constraints.gridy = 2;
+        constraints.anchor = GridBagConstraints.EAST;
+
+        add(butMadrid, constraints);
 
         butMilan.addActionListener(new ButtonEventMilan());
         butMadrid.addActionListener(new ButtonEventMadrid());
