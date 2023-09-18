@@ -18,7 +18,7 @@ public class lab_4 extends JFrame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
-        setBounds(1000, 500, 350,250);
+        setBounds(1000, 500, 360,160);
         setLayout(new GridBagLayout());
 
 
@@ -55,13 +55,10 @@ public class lab_4 extends JFrame
         constraints.gridx = 4;
         constraints.gridy = 2;
         constraints.anchor = GridBagConstraints.EAST;
-
         add(butMadrid, constraints);
 
         butMilan.addActionListener(new ButtonEventMilan());
         butMadrid.addActionListener(new ButtonEventMadrid());
-
-
     }
     class ButtonEventMilan implements ActionListener
     {
@@ -80,7 +77,7 @@ public class lab_4 extends JFrame
         {
             scMadrid += 1;
             result.setText("Result: " + scMilan + " X " + scMadrid);
-            lastScorer.setText("Real Madrid");
+            lastScorer.setText("Last Scorer: Real Madrid");
             if(scMilan < scMadrid){winner.setText("Winner: Real Madrid");}
             else if (scMilan == scMadrid){winner.setText("Winner: DRAW");}
         }
