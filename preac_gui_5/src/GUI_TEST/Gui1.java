@@ -2,25 +2,29 @@ package GUI_TEST;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-public class Gui extends JFrame
+public class Gui1 extends JFrame
 {
-    private  JButton button = new JButton("Кнопка хуепка"); //кнопка
+    Font fnt = new Font("Times new roman",Font.BOLD,20);
+    private  JButton button = new JButton("Кнопка жмакалка"); //кнопка
     private JTextField input = new JTextField("Вводите сюда", 5);   //текстовое поле
     private JLabel label = new JLabel("Ввод:"); //лабель
     private JRadioButton radio1 = new JRadioButton("Женщин");   //круглая кнопочка
     private JRadioButton radio2 = new JRadioButton("Мужчин");
-    private JCheckBox checkBox = new JCheckBox("я студент", true);  //поле выбора
+    private JCheckBox checkBox = new JCheckBox("Знаю о возможности краша системы после нажатия кнопки", true);  //поле выбора
 
-    public Gui()    //конструктор
+    public Gui1()    //конструктор
     {
         super("Первое окно");   //создание окна
-        this.setBounds(200,200,250,100);      //размеры и позиция окна
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //дефолтное закрытие
+        this.setBounds(1000,500,800,600);      //позиция и размеры
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //остановка программы после закрытия главного окна
 
         Container container = this.getContentPane();            //контейнер для кнопок
-        container.setLayout(new GridLayout(3,2, 2, 2 ));    //разметка
+        container.setLayout(new GridLayout(3,2, 10, 5 ));     //разметка 3 строки, 2 колонны,
+                                                                                    // отсутп друг от друга по шиоине 10, по высоте 5
         container.add(label);
         container.add(input);
+        input.setFont(fnt);
+        input.setForeground(Color.GREEN);
 
         ButtonGroup buttonGroup = new ButtonGroup();    //групировка круглых кнопок
         buttonGroup.add(radio1);
@@ -28,9 +32,10 @@ public class Gui extends JFrame
 
         container.add(radio1);
         container.add(radio2);
-        radio1.setSelected(true);
+        radio1.setSelected(false);       //по дефолту  кнопка не нажата
 
         container.add(checkBox);
+        checkBox.setSelected(false);
 
         button.addActionListener(new ButtonEventListener());
         container.add(button);
