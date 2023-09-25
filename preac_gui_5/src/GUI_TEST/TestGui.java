@@ -4,7 +4,7 @@ public class TestGui
 {
     public static void main(String[] args)
     {
-        lab_4 app = new lab_4();
+        prac5 app = new prac5();
         app.setVisible(true);
     }
 }
