@@ -28,7 +28,7 @@ public class prac5 extends JComponent {
             {
                 image = images.get(i);
                 this.repaint();
-                Thread.sleep(70);
+                Thread.sleep(7000);
                 if(i < files.length-1)
                     i++;
                 else
