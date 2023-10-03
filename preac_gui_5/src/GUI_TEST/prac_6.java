@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class lab_6 extends JFrame
+public class prac_6 extends JFrame
 {
     JTextArea textArea = new JTextArea("Введите текст сюда");
     JScrollPane scrool = new JScrollPane();
@@ -19,7 +19,7 @@ public class lab_6 extends JFrame
     JMenuItem fontMSSS = new JMenuItem("MS Sans Serif");
     JMenuItem fontCn = new JMenuItem("Courier New");
 
-    lab_6()
+    prac_6()
     {
         super("Лаба №6");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
