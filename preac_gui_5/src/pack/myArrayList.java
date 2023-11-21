@@ -1,6 +1,6 @@
 package pack;
 
-public class myArrayList<T>
+public class myArrayList
 {
     private int _capacity;
     private int _size;
@@ -23,21 +23,14 @@ public class myArrayList<T>
 
     private void _addCapacity()
     {
-        System.out.print("dobavily capacity\n");
+        System.out.println("capacity added!!!");
         _capacity *= 2;
         Object[] tmpArray = new Object[_capacity];
         if(_size > 0)
         {
-            for(int i = 0; i < _size; i++)
-            {
-                tmpArray[i] = _array[i];
-            }
-            _array = tmpArray;
+            System.arraycopy(_array, 0, tmpArray, 0, _size);
         }
-        else
-        {
-            _array = tmpArray;
-        }
+        _array = tmpArray;
     }
 
     public void add (Object obj)
@@ -69,7 +62,8 @@ public class myArrayList<T>
         _size++;
     }
 
-    public void print() {
+    public void print()
+    {
         if (_size == 0) return;
         {
             for (int i = 0; i < _size; i++) System.out.print(_array[i] + " ");
@@ -96,8 +90,10 @@ public class myArrayList<T>
         {
             for (int i = 0; i < _size; i++)
             {
-                //System.out.println("chikl");
-                if(_array[i] == obj) return true;
+                if(_array[i].equals(obj))
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -120,15 +116,13 @@ public class myArrayList<T>
         _size--;
     }
 
-
-
     public int size()
     {
         return _size;
     }
-    public void capacity()
+    public int capacity()
     {
-        System.out.println("capacity = " + _capacity);
+        return  _capacity;
     }
 
 }
