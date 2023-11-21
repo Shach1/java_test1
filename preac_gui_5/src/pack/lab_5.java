@@ -1,4 +1,5 @@
-package GUI_TEST;
+package pack;
+
 import static java.lang.Math.sqrt;
 import static java.lang.Math.ceil;
 import java.util.Scanner;
