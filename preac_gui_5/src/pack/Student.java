@@ -25,4 +25,8 @@ class Student implements Comparable<Student>
         if (score < student.getScore()) return -1;
         return 1;
     }
+    public String toString()
+    {
+        return name + ": " + score;
+    }
 }

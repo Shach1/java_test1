@@ -29,7 +29,7 @@ public class lab_6
 
         for (Student student : studentsSorted)
         {
-            System.out.println(student.getName() + ": " + student.getScore());
+            System.out.println(student);
         }
     }
 }

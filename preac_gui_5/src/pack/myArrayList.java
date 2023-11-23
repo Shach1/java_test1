@@ -116,6 +116,15 @@ public class myArrayList
         _size--;
     }
 
+
+    public Object[] toArray()
+    {
+        Object[] array = new Object[_size];
+        System.arraycopy(_array, 0, array, 0, _size);
+        return array;
+    }
+
+
     public int size()
     {
         return _size;
