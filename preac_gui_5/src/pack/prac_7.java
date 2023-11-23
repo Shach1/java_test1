@@ -1,7 +1,9 @@
 package pack;
-import java.util.ArrayList;
+
+// Написать свою реализацию ArrayList
 // реализовать конструктор который инициализируется числом/пустой
 // реализовать методы add get set size contains remove
+
 public class prac_7
 {
     public static void main(String[] args)
